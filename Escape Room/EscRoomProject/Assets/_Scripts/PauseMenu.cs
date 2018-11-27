@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour {
     public void Resume()
     {
         pauseUI.SetActive(false);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         isPaused = false;
         Debug.Log("Unpausing Menu...");
     }
