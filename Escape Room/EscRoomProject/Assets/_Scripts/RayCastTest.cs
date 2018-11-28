@@ -13,9 +13,9 @@ public class RayCastTest : MonoBehaviour {
     {
         RaycastHit hit;
         Ray look = new Ray(player.position, player.forward);
-        Debug.DrawRay(player.position, player.forward * 3);
+        Debug.DrawRay(player.position, player.forward * 2);
 
-        if (Physics.Raycast(look, out hit, 3))
+        if (Physics.Raycast(look, out hit, 2))
         {
 
             if(hit.collider.tag == "Light")
