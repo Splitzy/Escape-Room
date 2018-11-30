@@ -21,6 +21,11 @@ public class PauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
+        if(Time.timeScale == 0f)
+        {
+            return;
+        }
+
 		if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(isPaused)
@@ -40,6 +45,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         isPaused = false;
         Debug.Log("Unpausing Menu...");
+        Debug.Log(Time.timeScale); 
     }
 
     public void Pause()
@@ -48,6 +54,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 0f;
         isPaused = true;
         Debug.Log("Pausing Menu...");
+        Debug.Log(Time.timeScale);
     }
 
     public void LoadMainMenu()
