@@ -11,22 +11,22 @@ public class RayCastTest : MonoBehaviour {
 
     void Update()
     {
+        promptUI.SetActive(false);
         RaycastHit hit;
         Ray look = new Ray(player.position, player.forward);
         Debug.DrawRay(player.position, player.forward * 2);
 
         if (Physics.Raycast(look, out hit, 2))
         {
-
             if(hit.collider.tag == "Light")
             {
                 promptText.text = "This is a light!";
                 promptUI.SetActive(true);
-            }
-            else
-            {
-                promptText.text = "";
-                promptUI.SetActive(false);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    hit.collider.SendMessage("TurnOff");
+                }
             }
         }
 	}
