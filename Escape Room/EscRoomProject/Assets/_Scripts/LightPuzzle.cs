@@ -17,11 +17,13 @@ public class LightPuzzle : MonoBehaviour
             {
                 LightsOnOff[i].intensity = 0;
                 isOff = true;
+                Debug.Log("Turned on");
             }
             else
             {
                 LightsOnOff[i].intensity = 1;
                 isOff = false;
+                Debug.Log("Turned off");
             }
 
         }
