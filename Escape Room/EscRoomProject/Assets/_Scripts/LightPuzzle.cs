@@ -8,6 +8,7 @@ public class LightPuzzle : MonoBehaviour
     public Light[] LightsOnOff;
     private bool isOff = true;
     public GameObject wall;
+    private AudioSource aSource;
 
     public void TurnOff()
     {
@@ -18,15 +19,22 @@ public class LightPuzzle : MonoBehaviour
                 LightsOnOff[i].intensity = 0;
                 isOff = true;
                 Debug.Log("Turned on");
+                aSource.Play();
             }
             else
             {
                 LightsOnOff[i].intensity = 1;
                 isOff = false;
                 Debug.Log("Turned off");
+                aSource.Play();
             }
 
         }
+    }
+
+    public void Start()
+    {
+        aSource = GetComponent<AudioSource>();
     }
 
     public void Update()
