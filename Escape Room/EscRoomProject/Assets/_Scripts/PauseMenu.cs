@@ -21,18 +21,14 @@ public class PauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
-        if(Time.timeScale == 0f)
-        {
-            return;
-        }
 
 		if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused)
+            if(isPaused == true)
             {
                 Resume();
             }
-            else
+            else if (isPaused == false)
             {
                 Pause();
             }
@@ -60,6 +56,6 @@ public class PauseMenu : MonoBehaviour {
     public void LoadMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
     }
 }
