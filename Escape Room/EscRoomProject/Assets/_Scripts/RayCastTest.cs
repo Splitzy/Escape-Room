@@ -28,6 +28,16 @@ public class RayCastTest : MonoBehaviour {
                     hit.collider.SendMessage("TurnOff");
                 }
             }
+            else if (hit.collider.tag == "Button")
+            {
+                promptText.text = "This is a button!";
+                promptUI.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Button has been pressed");
+                }
+            }
         }
 	}
 }
