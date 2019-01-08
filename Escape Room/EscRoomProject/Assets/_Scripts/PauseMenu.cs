@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
@@ -9,6 +10,9 @@ public class PauseMenu : MonoBehaviour {
     private GameObject pauseUI;
 
     public static bool isPaused = false;
+
+    public UnityEvent onPause = new UnityEvent();
+    public UnityEvent onUnPause = new UnityEvent();
 
 
 
@@ -41,7 +45,8 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         isPaused = false;
         Debug.Log("Unpausing Menu...");
-        Debug.Log(Time.timeScale); 
+        Debug.Log(Time.timeScale);
+        onUnPause.Invoke();
     }
 
     public void Pause()
@@ -51,11 +56,12 @@ public class PauseMenu : MonoBehaviour {
         isPaused = true;
         Debug.Log("Pausing Menu...");
         Debug.Log(Time.timeScale);
+        onPause.Invoke();
     }
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         //SceneManager.LoadScene("MainMenu");
     }
 }
