@@ -13,14 +13,6 @@ public class PauseMenu : MonoBehaviour {
 
     public UnityEvent onPause = new UnityEvent();
     public UnityEvent onUnPause = new UnityEvent();
-
-
-
-	// Use this for initialization
-	void Start()
-    {
-		
-	}
 	
 	// Update is called once per frame
 	void Update()
@@ -61,7 +53,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void LoadMainMenu()
     {
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu");
     }
 }
