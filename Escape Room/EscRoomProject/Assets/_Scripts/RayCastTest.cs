@@ -18,7 +18,7 @@ public class RayCastTest : MonoBehaviour {
 
         if (Physics.Raycast(look, out hit, 2))
         {
-            if(hit.collider.tag == "Light")
+            if(hit.collider.CompareTag("Light"))
             {
                 promptText.text = "This is a light!";
                 promptUI.SetActive(true);
@@ -28,7 +28,7 @@ public class RayCastTest : MonoBehaviour {
                     hit.collider.SendMessage("TurnOff");
                 }
             }
-            else if (hit.collider.tag == "Button")
+            else if (hit.collider.CompareTag("Button"))
             {
                 promptText.text = "This is a button!";
                 promptUI.SetActive(true);
@@ -36,6 +36,7 @@ public class RayCastTest : MonoBehaviour {
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Button has been pressed");
+                    hit.collider.SendMessage("ButtonOn");
                 }
             }
         }
