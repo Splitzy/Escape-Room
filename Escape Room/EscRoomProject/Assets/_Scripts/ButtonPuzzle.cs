@@ -9,7 +9,7 @@ public class ButtonPuzzle : MonoBehaviour {
     public bool isOn = false;
     private AudioSource aSource;
     private float timeSincePress = 10.0f;
-    private float time = 0;
+    private float time = 10;
 
 	// Use this for initialization
 	void Start ()
@@ -26,17 +26,22 @@ public class ButtonPuzzle : MonoBehaviour {
             SceneManager.LoadScene("Main Menu");
         }
 
-        if (time > timeSincePress)
+        if (time < 0)
         {
-            time = 0;
+            time = 10;
             isOn = false;
             //aSource.Play();
         }
+        Debug.Log(isOn);
     }
 
     public void ButtonOn()
     {
-        time += Time.deltaTime;
         isOn = true;
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            Debug.Log(time);
+        }
     }
 }
