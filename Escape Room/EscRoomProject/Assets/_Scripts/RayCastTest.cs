@@ -20,7 +20,7 @@ public class RayCastTest : MonoBehaviour {
         {
             if(hit.collider.CompareTag("Light"))
             {
-                promptText.text = "This is a light!";
+                promptText.text = "Press E to Interact";
                 promptUI.SetActive(true);
 
                 if(Input.GetKeyDown(KeyCode.E))
@@ -30,12 +30,11 @@ public class RayCastTest : MonoBehaviour {
             }
             else if (hit.collider.CompareTag("Button"))
             {
-                promptText.text = "This is a button!";
+                promptText.text = "Press E to Interact";
                 promptUI.SetActive(true);
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Button has been pressed");
                     hit.collider.SendMessage("ButtonOn");
                 }
             }
