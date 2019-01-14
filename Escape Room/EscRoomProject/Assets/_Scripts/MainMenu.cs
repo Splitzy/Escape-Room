@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void LoadGame()
     {
-        Debug.Log("Loading game...");
         SceneManager.LoadScene("EscapeRoom");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quiting Game...");
         Application.Quit();
     }
 

@@ -13,9 +13,16 @@ public class PauseMenu : MonoBehaviour {
 
     public UnityEvent onPause = new UnityEvent();
     public UnityEvent onUnPause = new UnityEvent();
-	
-	// Update is called once per frame
-	void Update()
+
+    // Update is called once per frame
+
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    void Update()
     {
 
 		if(Input.GetKeyDown(KeyCode.Escape))
@@ -33,21 +40,21 @@ public class PauseMenu : MonoBehaviour {
 
     public void Resume()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        Debug.Log("Unpausing Menu...");
-        Debug.Log(Time.timeScale);
         onUnPause.Invoke();
     }
 
     public void Pause()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         pauseUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        Debug.Log("Pausing Menu...");
-        Debug.Log(Time.timeScale);
         onPause.Invoke();
     }
 
