@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -566,7 +566,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 62078d9968c8d5546a24e806c54bb3a6, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -2252,7 +2252,7 @@ MonoBehaviour:
   LightsOnOff:
   - {fileID: 1560038762}
   - {fileID: 1364318072}
-  wall: {fileID: 1739054272}
+  door: {fileID: 1739054272}
 --- !u!1 &466097766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   LightsOnOff:
   - {fileID: 36089293}
   - {fileID: 2102707804}
-  wall: {fileID: 1739054272}
+  door: {fileID: 1739054272}
 --- !u!1001 &647297559
 Prefab:
   m_ObjectHideFlags: 0
@@ -3056,7 +3056,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 62078d9968c8d5546a24e806c54bb3a6, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -3977,7 +3977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3985,7 +3985,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 62078d9968c8d5546a24e806c54bb3a6, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -4153,7 +4153,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 62078d9968c8d5546a24e806c54bb3a6, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -4559,7 +4559,7 @@ MonoBehaviour:
   LightsOnOff:
   - {fileID: 1364318072}
   - {fileID: 36089293}
-  wall: {fileID: 1739054272}
+  door: {fileID: 1739054272}
 --- !u!1 &1151368466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,7 +5137,7 @@ Transform:
   m_GameObject: {fileID: 1480395188}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 5.65, y: -1.46, z: 2.633}
-  m_LocalScale: {x: 3.44, y: 0.1, z: 5.91}
+  m_LocalScale: {x: 3.55, y: 0.1, z: 5.91}
   m_Children: []
   m_Father: {fileID: 775942407}
   m_RootOrder: 4
@@ -5986,7 +5986,7 @@ MonoBehaviour:
   - {fileID: 36089293}
   LightsOnOff:
   - {fileID: 2102707804}
-  wall: {fileID: 1739054272}
+  door: {fileID: 1739054272}
 --- !u!1 &1623804406
 GameObject:
   m_ObjectHideFlags: 0
