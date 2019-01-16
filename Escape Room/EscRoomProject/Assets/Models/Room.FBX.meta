@@ -12,8 +12,10 @@ ModelImporter:
     2100000: No Name
     2300000: Box001
     2300002: Box002
+    2300004: //RootNode
     3300000: Box001
     3300002: Box002
+    3300004: //RootNode
     4300000: Box001
     4300002: Box002
   externalObjects: {}
