@@ -7,7 +7,7 @@ public class ButtonPuzzle : MonoBehaviour {
 
     public ButtonPuzzle[] button = new ButtonPuzzle[3];
     public bool isOn = false;
-    private AudioSource aSource;
+    public AudioSource aSource;
     private float timeSincePress = 30.0f;
     private float time = 0;
 
@@ -29,5 +29,6 @@ public class ButtonPuzzle : MonoBehaviour {
     public void ButtonOn()
     {
         isOn = true;
+        aSource.Play();
     }
 }
